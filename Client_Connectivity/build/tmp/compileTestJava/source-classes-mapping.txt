@@ -1,0 +1,2 @@
+alpha/client_connectivity/ClientConnectivityApplicationTests.java
+ alpha.client_connectivity.ClientConnectivityApplicationTests
