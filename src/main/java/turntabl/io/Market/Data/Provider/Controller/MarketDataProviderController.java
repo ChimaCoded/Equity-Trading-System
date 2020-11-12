@@ -1,15 +1,15 @@
-package turntabl.io.Trading.Engine.Controller;
+package turntabl.io.Market.Data.Provider.Controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
-import turntabl.io.Trading.Engine.Model.MarketData;
+import turntabl.io.Market.Data.Provider.Model.MarketDataProvider;
 
 
 @RestController
-public class MarketDataController {
+public class MarketDataProviderController {
 
     private WebClient web_client = WebClient.builder()
             .baseUrl("https://exchange.matraining.com")
@@ -17,12 +17,12 @@ public class MarketDataController {
             .build();
 
     @GetMapping("/data")
-    public Mono<MarketData[]> getData(){
-        Mono<MarketData[]> data = web_client.get()
+    public Mono<MarketDataProvider[]> getData(){
+        Mono<MarketDataProvider[]> data = web_client.get()
                                     .uri("/md")
                                     .accept(MediaType.APPLICATION_JSON)
                                     .retrieve()
-                                    .bodyToMono(MarketData[].class);
+                                    .bodyToMono(MarketDataProvider[].class);
         return data;
     }
     /*public WebClient web_client = WebClient.builder()

@@ -1,14 +1,14 @@
-package turntabl.io.Trading.Engine;
+package turntabl.io.Market.Data.Provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TradingEngineApplication {
+public class MarketDataProviderApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(TradingEngineApplication.class, args);
+		SpringApplication.run(MarketDataProviderApplication.class, args);
 	}
 
 }
