@@ -1,6 +1,8 @@
-turntabl/io/Trading/Engine/TradingEngineApplication.java
- turntabl.io.Trading.Engine.TradingEngineApplication
-turntabl/io/Trading/Engine/Model/MarketData.java
- turntabl.io.Trading.Engine.Model.MarketData
-turntabl/io/Trading/Engine/Controller/MarketDataController.java
- turntabl.io.Trading.Engine.Controller.MarketDataController
+turntabl/io/Market/Data/Provider/MarketDataProviderApplication.java
+ turntabl.io.Market.Data.Provider.MarketDataProviderApplication
+turntabl/io/Market/Data/Provider/Model/MarketDataProvider_Exchange2.java
+ turntabl.io.Market.Data.Provider.Model.MarketDataProvider_Exchange2
+turntabl/io/Market/Data/Provider/Model/MarketDataProvider_Exchange.java
+ turntabl.io.Market.Data.Provider.Model.MarketDataProvider_Exchange
+turntabl/io/Market/Data/Provider/Controller/MarketDataProviderController.java
+ turntabl.io.Market.Data.Provider.Controller.MarketDataProviderController

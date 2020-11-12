@@ -2,7 +2,7 @@ package turntabl.io.Market.Data.Provider.Model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class MarketDataProvider {
+public class MarketDataProvider_Exchange {
 
     @JsonProperty("LAST_TRADED_PRICE")
     private double last_traded_price;
@@ -25,12 +25,12 @@ public class MarketDataProvider {
     @JsonProperty("TICKER")
     private String ticker;
 
-    public MarketDataProvider() {
+    public MarketDataProvider_Exchange() {
 
     }
 
-    public MarketDataProvider(double last_traded_price, double bid_price, int sell_limit, String ticker, double max_shift_price,
-                              double ask_price, int buy_limit) {
+    public MarketDataProvider_Exchange(double last_traded_price, double bid_price, int sell_limit, String ticker, double max_shift_price,
+                                       double ask_price, int buy_limit) {
 
         this.last_traded_price = last_traded_price;
         this.bid_price = bid_price;
