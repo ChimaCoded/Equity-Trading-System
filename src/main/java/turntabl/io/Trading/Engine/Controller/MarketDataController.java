@@ -4,25 +4,91 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 import turntabl.io.Trading.Engine.Model.MarketData;
+
 
 @RestController
 public class MarketDataController {
 
-    public WebClient web_client = WebClient.builder()
+    private WebClient web_client = WebClient.builder()
             .baseUrl("https://exchange.matraining.com")
             .defaultHeader("Content-Type", "application/json")
             .build();
 
+    @GetMapping("/data")
+    public Mono<MarketData[]> getData(){
+        Mono<MarketData[]> data = web_client.get()
+                                    .uri("/md")
+                                    .accept(MediaType.APPLICATION_JSON)
+                                    .retrieve()
+                                    .bodyToMono(MarketData[].class);
+        return data;
+    }
+    /*public WebClient web_client = WebClient.builder()
+            .baseUrl("https://exchange.matraining.com")
+            .defaultHeader("Content-Type", "application/json")
+            .build();*/
 
-    /*@GetMapping("/data")
+    /*@PostMapping("/data")
+    public Flux<MarketData> postMarketData(){
+
+        ArrayList<MarketData> marketData = new ArrayList<>();
+
+        MarketData MSTFmarketData = new MarketData(0, 0, 5000, "MSFT",
+                40, 0, 10000);
+
+        MarketData NTFLXmarketData = new MarketData(0, 0, 5000, "NTLX",
+                20, 0, 10000);
+
+        MarketData GOOGLmarketData = new MarketData(	0, 0, 5000, "GOOGL",
+                150, 0, 10000);
+
+        MarketData AAPLmarketData = new MarketData(	0, 0, 5000, "AAPL",
+                15, 0, 10000);
+
+        MarketData TSLAmarketData = new MarketData(	0, 0.11, 5000, "TSLA",
+                3, 0, 10000);
+
+        MarketData IBMmarketData = new MarketData(	0, 1.3, 5000, "IBM",
+                10, 0, 10000);
+
+        MarketData ORCLmarketData = new MarketData(	0, 0, 5000, "ORCL",
+                5, 0, 10000);
+
+        MarketData AMZNmarketData = new MarketData(	0, 0, 5000, "AMZN",
+                200, 0, 10000);
+
+        /*marketData.add(MSTFmarketData);
+        marketData.add(NTFLXmarketData);
+        marketData.add(GOOGLmarketData);
+        marketData.add(AAPLmarketData);
+        marketData.add(TSLAmarketData);
+        marketData.add(IBMmarketData);
+        marketData.add(ORCLmarketData);
+        marketData.add(AMZNmarketData);*/
+
+        /*return web_client.post().uri("/data")
+                .body(Mono.just(TSLAmarketData), MarketData.class).retrieve()
+                .bodyToFlux(MarketData.class);
+    }
+
+    @GetMapping("/data")
     public Flux<MarketData> marketData(){
-        return web_client.get()
-                .uri("/md")
+
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+
+        }
+
+        Flux<MarketData> returned_list = web_client.get()
+                .uri("/data")
                 .retrieve()
                 .bodyToFlux(MarketData.class);
-    }*/
+
+        return returned_list;
+    }
 
     /*@GetMapping("/data")
     public String getData(){
@@ -30,7 +96,7 @@ public class MarketDataController {
         return market_data.toString();
     }*/
 
-    @GetMapping("/data")
+    /*@GetMapping("/data")
     public Flux<MarketData> market_data() {
         Flux<MarketData> return_list = web_client.get()
                 .uri("/md")
@@ -42,5 +108,7 @@ public class MarketDataController {
         });
 
         return return_list;
-    }
+    }*/
+
+
 }
