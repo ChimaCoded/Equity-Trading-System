@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eb307215-a0bc-4102-9790-58f06067adf2" name="Default Changelist" comment="Getting Market Data">
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileContent/fileContent.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.6.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/configuration-cache/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/turntabl/io/Trading/Engine/Controller/MarketDataController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/turntabl/io/Trading/Engine/Model/MarketData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/turntabl/io/Trading/Engine/TradingEngineApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/turntabl/io/Trading/Engine/TradingEngineApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/source-classes-mapping.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/turntabl/io/Trading/Engine/TradingEngineApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/turntabl/io/Trading/Engine/TradingEngineApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/turntabl/io/Trading/Engine/Controller/MarketDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/turntabl/io/Trading/Engine/Controller/MarketDataController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1k3qy5wxDW03K0d6TEC5uWgrI1x" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Compressed/spring-starter-REST-demo" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="TradingEngineApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="turntabl.io.Trading.Engine.TradingEngineApplication" />
+      <module name="Trading-Engine.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="turntabl.io.Trading.Engine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TradingEngineApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb307215-a0bc-4102-9790-58f06067adf2" name="Default Changelist" comment="" />
+      <created>1604939896373</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604939896373</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Getting Market Data">
+      <created>1605175455579</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605175455627</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Getting Market Data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Getting Market Data" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="166" y="27" width="1024" height="741" key="#Project_Structure" timestamp="1604940431398">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="166" y="27" width="1024" height="741" key="#Project_Structure/0.27.1366.741@0.27.1366.741" timestamp="1604940431398" />
+    <state x="491" y="116" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1605174399723">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="491" y="116" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1605174399723" />
+    <state x="391" y="263" width="583" height="283" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1605010591892">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="391" y="263" width="583" height="283" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.27.1366.741@0.27.1366.741" timestamp="1605010591892" />
+    <state x="416" y="146" width="524" height="510" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1605119381907">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="416" y="146" width="524" height="510" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.27.1366.741@0.27.1366.741" timestamp="1605119381907" />
+    <state x="233" y="27" width="890" height="741" key="CommitChangelistDialog2" timestamp="1605176608838">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="233" y="27" width="890" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1605176608838" />
+    <state x="153" y="43" width="1092" height="629" key="DiffContextDialog" timestamp="1605176526694">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="153" y="43" width="1092" height="629" key="DiffContextDialog/0.27.1366.741@0.27.1366.741" timestamp="1605176526694" />
+    <state x="461" y="102" width="424" height="597" key="FileChooserDialogImpl" timestamp="1604941579670">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="461" y="102" width="424" height="597" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1604941579670" />
+    <state width="1320" height="133" key="GridCell.Tab.0.bottom" timestamp="1605175672040">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="133" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1605175672040" />
+    <state width="1320" height="133" key="GridCell.Tab.0.center" timestamp="1605175672038">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="133" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1605175672038" />
+    <state width="1320" height="133" key="GridCell.Tab.0.left" timestamp="1605175672037">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="133" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1605175672037" />
+    <state width="1320" height="133" key="GridCell.Tab.0.right" timestamp="1605175672039">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="133" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1605175672039" />
+    <state x="273" y="143" width="799" height="516" key="NewModule_or_Project.wizard" timestamp="1604940061251">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="273" y="143" width="799" height="516" key="NewModule_or_Project.wizard/0.27.1366.741@0.27.1366.741" timestamp="1604940061251" />
+    <state x="433" y="70" width="489" height="662" key="RollbackChangesDialog" timestamp="1605173946350">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="433" y="70" width="489" height="662" key="RollbackChangesDialog/0.27.1366.741@0.27.1366.741" timestamp="1605173946350" />
+    <state x="166" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1604940309736">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="166" y="27" width="1024" height="741" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1604940309736" />
+    <state x="455" y="177" width="446" height="448" key="chooseDestDirectoryDialog" timestamp="1604940372522">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="455" y="177" width="446" height="448" key="chooseDestDirectoryDialog/0.27.1366.741@0.27.1366.741" timestamp="1604940372522" />
+    <state x="248" y="89" width="912" height="530" key="git4idea.branch.GitBranchIsNotFullyMergedDialog" timestamp="1605174670761">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="248" y="89" width="912" height="530" key="git4idea.branch.GitBranchIsNotFullyMergedDialog/0.27.1366.741@0.27.1366.741" timestamp="1605174670761" />
+    <state x="280" y="27" width="786" height="741" key="new project wizard" timestamp="1604940020080">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="280" y="27" width="786" height="741" key="new project wizard/0.27.1366.741@0.27.1366.741" timestamp="1604940020080" />
+  </component>
+</project>
