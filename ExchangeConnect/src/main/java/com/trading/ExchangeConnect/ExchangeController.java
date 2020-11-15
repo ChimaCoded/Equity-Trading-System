@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 @RestController
 public class ExchangeController {
 
-    Order clientOrder = new Order("IBM" + "\n", "10", "0.99", "BUY");
+    Order clientOrder = new Order("IBM" , "10", "0.99", "BUY");
 
 
     @GetMapping("/data")
@@ -51,5 +51,24 @@ public class ExchangeController {
         // "Exchange Connectivity";
     }
 
+    @DeleteMapping("/cancelorder/{orderid}")
+    public String cancelOrder(@PathVariable String orderid){
+        String state;
+
+        WebClient client = WebClient.builder()
+                .baseUrl("https://exchange.matraining.com")
+                .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                .build();
+
+        state = client.delete()
+                .uri("/bbae4999-fdd0-4c9b-bc14-f365f701d65f/order/" + orderid)
+                .retrieve().bodyToMono(String.class)
+                .block();
+
+        return state;
+        //return "done";
+        // "Exchange Connectivity";
     }
+
+}
 
