@@ -1,8 +1,9 @@
 package turntabl.io.Market.Data.Provider.Model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.aop.target.LazyInitTargetSource;
 
-public class MarketDataProvider_Exchange {
+public class MarketData {
 
     @JsonProperty("LAST_TRADED_PRICE")
     private double last_traded_price;
@@ -25,12 +26,13 @@ public class MarketDataProvider_Exchange {
     @JsonProperty("TICKER")
     private String ticker;
 
-    public MarketDataProvider_Exchange() {
+    public MarketData() {
 
     }
 
-    public MarketDataProvider_Exchange(double last_traded_price, double bid_price, int sell_limit, String ticker, double max_shift_price,
-                                       double ask_price, int buy_limit) {
+    public MarketData(double last_traded_price, int sell_limit,
+                      double max_shift_price, double ask_price,
+                      int buy_limit, double bid_price, String ticker) {
 
         this.last_traded_price = last_traded_price;
         this.bid_price = bid_price;
@@ -110,4 +112,5 @@ public class MarketDataProvider_Exchange {
 
         this.buy_limit = buy_limit;
     }
+
 }

@@ -1,8 +1,8 @@
+turntabl/io/Market/Data/Provider/Model/MarketData.java
+ turntabl.io.Market.Data.Provider.Model.MarketData
+turntabl/io/Market/Data/Provider/Controller/MarketDataController.java
+ turntabl.io.Market.Data.Provider.Controller.MarketDataController
+turntabl/io/Market/Data/Provider/DAO/MarketDataDAO.java
+ turntabl.io.Market.Data.Provider.DAO.MarketDataDAO
 turntabl/io/Market/Data/Provider/MarketDataProviderApplication.java
  turntabl.io.Market.Data.Provider.MarketDataProviderApplication
-turntabl/io/Market/Data/Provider/Model/MarketDataProvider_Exchange2.java
- turntabl.io.Market.Data.Provider.Model.MarketDataProvider_Exchange2
-turntabl/io/Market/Data/Provider/Model/MarketDataProvider_Exchange.java
- turntabl.io.Market.Data.Provider.Model.MarketDataProvider_Exchange
-turntabl/io/Market/Data/Provider/Controller/MarketDataProviderController.java
- turntabl.io.Market.Data.Provider.Controller.MarketDataProviderController
