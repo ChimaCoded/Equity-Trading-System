@@ -1,7 +1,5 @@
 package turntabl.io.Trading.Engine.Controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +12,6 @@ import turntabl.io.Trading.Engine.Model.MarketData;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @RestController
 public class MarketDataController {
@@ -51,10 +48,12 @@ public class MarketDataController {
     }
 
     @GetMapping("/{ticker}")
-    public Optional<MarketData> controllerFilterByTicker(@PathVariable("ticker") String ticker){
+    public List<Optional<MarketData>> controllerFilterByTicker(@PathVariable("ticker") String ticker){
         Buy buy = new Buy();
         return buy.filterByTicker(ticker, repository);
     }
+
+
 
 
 

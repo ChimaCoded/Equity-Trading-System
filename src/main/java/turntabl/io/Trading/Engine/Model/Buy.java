@@ -8,19 +8,28 @@ import java.util.stream.Collectors;
 
 public class Buy {
 
-    private List<MarketData> filtered = new ArrayList<>();
+    private double lastTradedPrice, maxShiftPrice, askPrice, bidPrice;
+    private String ticker;
 
+    private List<Optional<MarketData>> filtered = new ArrayList<>();
 
+    //private double best_max_shift_price;
 
-    private double best_max_shift_price;
-
-    public Optional<MarketData> filterByTicker (String ticker, List<MarketData> marketData) {
+    public List<Optional<MarketData>> filterByTicker (String ticker, List<MarketData> marketData) {
         //filter by ticker and collect data to list
-        return marketData.stream().filter(
+        Optional<MarketData> data = marketData.stream().filter(
                 tick -> tick.getTicker().equals(ticker)).collect(Collectors.toList())
                 .stream()
                 .max(Comparator.comparing(MarketData::getMax_shift_price));
+        filtered.add(data);
+        return filtered;
     }
+
+    public void data(){
+        filtered.get(0).map();
+    }
+
+
 
 
     /*public double comparing_max_shift_price(){
