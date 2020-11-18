@@ -21,10 +21,10 @@
                     <xs:element name="orderId" type="xs:string"/>
                     <xs:element name="clientId" type="xs:string"/>
                     <xs:element name="portfolioId" type="xs:string"/>
-                    <xs:element name="ticker_name" type="xs:string"/>
+                    <xs:element name="ticker" type="xs:string"/>
                     <xs:element name="price" type="xs:double"/>
                     <xs:element name="quantity" type="xs:int"/>
-                    <xs:element name="status" type="xs:string"/>
+                    <xs:element name="side" type="xs:string"/>
                     <xs:element name="time_stamp" type="xs:string"/>
                 </xs:sequence>
             </xs:complexType>

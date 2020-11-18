@@ -1,7 +1,7 @@
 com/alpha2/ordervalidityconsumer/configuration/config.class
 com/alpha2/ordervalidityconsumer/wsdlfiles/Order.class
-com/alpha2/ordervalidityconsumer/endpoint/OrderEndpoint.class
 com/alpha2/ordervalidityconsumer/OrdervalidityconsumerApplication.class
+com/alpha2/ordervalidityconsumer/endpoint/OrderEndpoint.class
 com/alpha2/ordervalidityconsumer/wsdlfiles/package-info.class
 com/alpha2/ordervalidityconsumer/wsdlfiles/ObjectFactory.class
 com/alpha2/ordervalidityconsumer/wsdlfiles/GetOrderResponse.class

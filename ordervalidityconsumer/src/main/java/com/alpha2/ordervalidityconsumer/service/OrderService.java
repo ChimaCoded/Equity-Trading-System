@@ -2,8 +2,6 @@ package com.alpha2.ordervalidityconsumer.service;
 
 import com.alpha2.ordervalidityconsumer.wsdlfiles.GetOrderRequest;
 import com.alpha2.ordervalidityconsumer.wsdlfiles.GetOrderResponse;
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.stereotype.Service;

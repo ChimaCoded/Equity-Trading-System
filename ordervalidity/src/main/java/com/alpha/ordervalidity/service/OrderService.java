@@ -17,8 +17,8 @@ public class OrderService {
         od1.setPortfolioId("P01");
         od1.setPrice(2.5);
         od1.setQuantity(2);
-        od1.setStatus("Sell");
-        od1.setTickerName("APPL");
+        od1.setSide("Sell");
+        od1.setTicker("APPL");
         od1.setTimeStamp("12:01:02");
 
 
@@ -27,8 +27,8 @@ public class OrderService {
         od2.setPortfolioId("P01");
         od2.setPrice(3.5);
         od2.setQuantity(2);
-        od2.setStatus("BUY");
-        od2.setTickerName("APPL");
+        od2.setSide("BUY");
+        od2.setTicker("APPL");
         od2.setTimeStamp("13:01:02");
 
 
@@ -37,8 +37,8 @@ public class OrderService {
         od3.setPortfolioId("P01");
         od3.setPrice(3.5);
         od3.setQuantity(2);
-        od3.setStatus("BUY");
-        od3.setTickerName("APPL");
+        od3.setSide("BUY");
+        od3.setTicker("APPL");
         od3.setTimeStamp("13:01:02");
 
         order.put(od1.getClientId(), od1);
