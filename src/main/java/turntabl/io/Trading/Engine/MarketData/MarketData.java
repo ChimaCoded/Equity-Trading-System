@@ -1,24 +1,21 @@
-package turntabl.io.Trading.Engine.Model;
+package turntabl.io.Trading.Engine.MarketData;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MarketData {
 
-    @JsonProperty("LAST_TRADED_PRICE")
     private double last_traded_price;
 
-    @JsonProperty("MAX_SHIFT_PRICE")
     private double max_shift_price;
 
-    @JsonProperty("ASK_PRICE")
     private double ask_price;
 
-    @JsonProperty("BID_PRICE")
     private double bid_price;
 
-    @JsonProperty("TICKER")
     private String ticker;
+
+    private String url;
 
     public MarketData() {
 
@@ -85,4 +82,23 @@ public class MarketData {
         this.ask_price = ask_price;
     }
 
+    public String getURL() {
+        return url;
+    }
+
+    public void setURL(String url) {
+        this.url = url;
+    }
+
+    @Override
+    public String toString() {
+        return "MarketData{" +
+                "last_traded_price=" + last_traded_price +
+                ", max_shift_price=" + max_shift_price +
+                ", ask_price=" + ask_price +
+                ", bid_price=" + bid_price +
+                ", ticker='" + ticker + '\'' +
+                ", url='" + url + '\'' +
+                '}';
+    }
 }

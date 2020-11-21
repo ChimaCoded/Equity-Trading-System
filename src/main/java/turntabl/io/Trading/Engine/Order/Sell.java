@@ -1,4 +1,6 @@
-package turntabl.io.Trading.Engine.Model;
+package turntabl.io.Trading.Engine.Order;
+
+import turntabl.io.Trading.Engine.MarketData.MarketData;
 
 public class Sell {
 
