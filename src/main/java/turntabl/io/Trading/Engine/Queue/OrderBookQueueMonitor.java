@@ -5,14 +5,13 @@ import turntabl.io.Trading.Engine.MarketData.MarketData;
 import turntabl.io.Trading.Engine.OrderBook.OrderBook;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class OrderBookQueueMonitor {
 
-    public List<OrderBook[]> repository = new ArrayList<>();
+    public List<OrderBook> orderBookRepository = new ArrayList<>();
 
-    public List<OrderBook[]> getFromQueue(){
+    public List<OrderBook> getFromQueue(){
         new Thread(new Runnable() {
             Jedis jedis = new Jedis();
             @Override
@@ -27,15 +26,13 @@ public class OrderBookQueueMonitor {
 
                     String data = jedis.rpop("Order Book");
                     if(data == null) continue;
-                    OrderBook[] orderBook = Ultility.convertToObject(data, OrderBook[].class);
-                    repository.add(orderBook);
-                    System.out.println(Arrays.stream(orderBook).filter(
-                            ticker -> ticker.getProduct().equals("TSLA")));
+                    OrderBook orderBook = Ultility.convertToObject(data, OrderBook.class);
+                    orderBookRepository.add(orderBook);
                 }
             }
         }).start();
 
-        return repository;
+        return orderBookRepository;
     }
 
 }

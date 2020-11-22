@@ -2,32 +2,49 @@ package turntabl.io.Trading.Engine.Order;
 
 public class Buy {
 
-    private double lastTradedPrice, maxShiftPrice, askPrice, bidPrice;
-    private String ticker;
-    //private double best_max_shift_price;
-
-    /*public Optional<MarketData> filterByTicker (String ticker, List<MarketData> marketData) {
-        //filter by ticker and collect data to list
-        Optional<MarketData> data = marketData.stream().filter(
-                tick -> tick.getTicker().equals(ticker)).collect(Collectors.toList())
-                .stream()
-                .max(Comparator.comparing(MarketData::getMax_shift_price));
-
-        return data;
-    }*/
+    private double orderPrice, orderBookPrice;
+    private int orderQuantity, orderBookQuantity;
 
 
+    public Buy(double orderPrice, double orderBookPrice, int orderQuantity, int orderBookQuantity) {
+        this.orderPrice = orderPrice;
+        this.orderBookPrice = orderBookPrice;
+        this.orderQuantity = orderQuantity;
+        this.orderBookQuantity = orderBookQuantity;
+    }
 
+    public Buy() {
+    }
 
+    public double getOrderPrice() {
+        return orderPrice;
+    }
 
-    /*public double comparing_max_shift_price(){
-        if (market_data.getMax_shift_price() > market_data_2.getMax_shift_price()){
-            best_max_shift_price = market_data.getMax_shift_price();
-        }
-        else{
-            best_max_shift_price = market_data_2.getMax_shift_price();
-        }
-        return best_max_shift_price;
-    }*/
+    public void setOrderPrice(double orderPrice) {
+        this.orderPrice = orderPrice;
+    }
 
+    public double getOrderBookPrice() {
+        return orderBookPrice;
+    }
+
+    public void setOrderBookPrice(double orderBookPrice) {
+        this.orderBookPrice = orderBookPrice;
+    }
+
+    public int getOrderQuantity() {
+        return orderQuantity;
+    }
+
+    public void setOrderQuantity(int orderQuantity) {
+        this.orderQuantity = orderQuantity;
+    }
+
+    public int getOrderBookQuantity() {
+        return orderBookQuantity;
+    }
+
+    public void setOrderBookQuantity(int orderBookQuantity) {
+        this.orderBookQuantity = orderBookQuantity;
+    }
 }

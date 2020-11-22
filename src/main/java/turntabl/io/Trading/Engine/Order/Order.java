@@ -1,8 +1,9 @@
 package turntabl.io.Trading.Engine.Order;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-public class OrderAttributes {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Order {
 
     private String orderId;
 
@@ -20,13 +21,8 @@ public class OrderAttributes {
 
     private String timeStamp;
 
-    public OrderAttributes() {
-    }
-
-
-    public OrderAttributes(String orderId, String clientId, String portfolioId,
-                           String ticker, double price, int quantity,
-                           String side, String timeStamp) {
+    public Order(String orderId, String clientId, String portfolioId, String ticker,
+                 double price, int quantity, String side, String timeStamp) {
         this.orderId = orderId;
         this.clientId = clientId;
         this.portfolioId = portfolioId;
@@ -35,6 +31,9 @@ public class OrderAttributes {
         this.quantity = quantity;
         this.side = side;
         this.timeStamp = timeStamp;
+    }
+
+    public Order() {
     }
 
     public String getOrderId() {
@@ -99,5 +98,19 @@ public class OrderAttributes {
 
     public void setTimeStamp(String timeStamp) {
         this.timeStamp = timeStamp;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "orderId='" + orderId + '\'' +
+                ", clientId='" + clientId + '\'' +
+                ", portfolioId='" + portfolioId + '\'' +
+                ", ticker='" + ticker + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", side='" + side + '\'' +
+                ", timeStamp='" + timeStamp + '\'' +
+                '}';
     }
 }
