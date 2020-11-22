@@ -16,8 +16,8 @@ public class MarketDataProviderApplication {
 		OrderBookQueue orderBookQueue = new OrderBookQueue();
 		orderBookQueue.thread();
 
-		MarketDataQueue marketDataQueue = new MarketDataQueue();
-		marketDataQueue.thread();
+//		MarketDataQueue marketDataQueue = new MarketDataQueue();
+//		marketDataQueue.thread();
 	}
 
 }

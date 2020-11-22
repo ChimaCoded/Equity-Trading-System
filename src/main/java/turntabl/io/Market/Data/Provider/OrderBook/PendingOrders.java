@@ -22,15 +22,21 @@ public class PendingOrders {
     @JsonProperty("cumulativeQuantity")
     private int cumulativeQuantity;
 
-    public PendingOrders(String product, int quantity, double price, String side, int cumulativeQuantity) {
+    private String url;
+
+
+
+    public PendingOrders() {
+    }
+
+    public PendingOrders(String product, int quantity, double price, String side,
+                         int cumulativeQuantity, String url) {
         this.product = product;
         this.quantity = quantity;
         this.price = price;
         this.side = side;
         this.cumulativeQuantity = cumulativeQuantity;
-    }
-
-    public PendingOrders() {
+        this.url = url;
     }
 
     public String getProduct() {
@@ -73,14 +79,12 @@ public class PendingOrders {
         this.cumulativeQuantity = cumulativeQuantity;
     }
 
-    @Override
-    public String toString() {
-        return "PendingOrders{" +
-                "product='" + product + '\'' +
-                ", quantity=" + quantity +
-                ", price=" + price +
-                ", side='" + side + '\'' +
-                ", cumulativeQuantity=" + cumulativeQuantity +
-                '}';
+    public String getUrl() {
+        return url;
     }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
 }

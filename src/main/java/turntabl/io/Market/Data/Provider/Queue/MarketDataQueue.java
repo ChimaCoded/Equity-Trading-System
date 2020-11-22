@@ -14,7 +14,8 @@ import java.util.List;
 @RestController
 public class MarketDataQueue {
 
-    private List<MarketData> repository = new ArrayList<>();
+    private List<MarketData> marketDataRepository = new ArrayList<>();
+
 
     private WebClient getBuild(String url) {
         return WebClient.builder()
@@ -83,6 +84,8 @@ public class MarketDataQueue {
 
                     }
 
+                    marketDataRepository.clear();
+
                     Flux<MarketData> marketData1 = web_client.get()
                             .uri("/md")
                             .accept(MediaType.APPLICATION_JSON)
@@ -95,7 +98,7 @@ public class MarketDataQueue {
                                 object.getAsk_price(), object.getBuy_limit(), object.getBid_price(),
                                 object.getTicker(), object.getUrl());
 
-                        repository.add(marketData);
+                        marketDataRepository.add(marketData);
                     });
 
                     Flux<MarketData> marketData2 = web_client_2.get()
@@ -109,11 +112,11 @@ public class MarketDataQueue {
                                 object.getSell_limit(), object.getMax_shift_price(),
                                 object.getAsk_price(), object.getBuy_limit(), object.getBid_price(),
                                 object.getTicker(), object.getUrl());
-                        repository.add(marketData);
+                        marketDataRepository.add(marketData);
                     });
 
 
-                    String markertData = Ultility.convertToString(repository);
+                    String markertData = Ultility.convertToString(marketDataRepository);
                     jedis.lpush("Market Data", markertData);
                 }
             }
