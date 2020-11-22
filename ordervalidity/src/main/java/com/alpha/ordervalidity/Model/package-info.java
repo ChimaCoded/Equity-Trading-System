@@ -6,4 +6,4 @@
 //
 
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://alpha.com/ordervalidity/model", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.alpha.ordervalidity.model;
+package com.alpha.ordervalidity.Model;

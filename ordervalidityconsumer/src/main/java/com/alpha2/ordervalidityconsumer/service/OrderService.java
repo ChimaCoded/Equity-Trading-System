@@ -7,6 +7,7 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
+import redis.clients.jedis.Jedis;
 
 @Service
 public class OrderService extends WebServiceGatewaySupport {
@@ -20,6 +21,12 @@ public class OrderService extends WebServiceGatewaySupport {
     public GetOrderResponse getOrderResponse(GetOrderRequest request){
         template = new WebServiceTemplate(marshaller);
         GetOrderResponse ordRes =(GetOrderResponse) template.marshalSendAndReceive("http://localhost:8080/ws",request);
+
+        String requestStr = "ClientID: " + request.getClientId();
+
+        System.out.println(requestStr);
+
+
         return ordRes;
     }
 }

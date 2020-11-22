@@ -1,4 +1,4 @@
-package com.alpha.ordervalidity.configuration;
+package com.alpha.ordervalidity.Configuration;
 
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;

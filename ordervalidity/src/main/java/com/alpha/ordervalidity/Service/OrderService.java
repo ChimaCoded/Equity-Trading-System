@@ -1,6 +1,6 @@
-package com.alpha.ordervalidity.service;
+package com.alpha.ordervalidity.Service;
 
-import com.alpha.ordervalidity.model.Order;
+import com.alpha.ordervalidity.Model.Order;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -23,12 +23,13 @@ public class OrderService {
 
 
         Order od2 = new Order();
+        od2.setOrderId("O01");
         od2.setClientId("C02");
         od2.setPortfolioId("P01");
         od2.setPrice(3.5);
         od2.setQuantity(2);
         od2.setSide("BUY");
-        od2.setTicker("APPL");
+        od2.setTicker("IBM");
         od2.setTimeStamp("13:01:02");
 
 

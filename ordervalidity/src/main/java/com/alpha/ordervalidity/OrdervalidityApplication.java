@@ -1,5 +1,6 @@
 package com.alpha.ordervalidity;
 
+import com.alpha.ordervalidity.Queue.OrderValidityQueue;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,6 +9,10 @@ public class OrdervalidityApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(OrdervalidityApplication.class, args);
+
+        OrderValidityQueue orderValidityQueue = new OrderValidityQueue();
+        orderValidityQueue.thread();
+
     }
 
 }

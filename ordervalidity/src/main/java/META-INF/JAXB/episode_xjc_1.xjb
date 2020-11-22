@@ -10,16 +10,16 @@ Generated on: 2020.11.18 at 03:48:40 PM GMT
   -->
   <bindings scd="x-schema::tns" xmlns:tns="http://alpha.com/ordervalidity/model">
     <schemaBindings map="false">
-      <package name="com.alpha.ordervalidity.model"/>
+      <package name="com.alpha.ordervalidity.Model"/>
     </schemaBindings>
     <bindings scd="tns:getOrderRequest">
-      <class ref="com.alpha.ordervalidity.model.GetOrderRequest"/>
+      <class ref="com.alpha.ordervalidity.Model.GetOrderRequest"/>
     </bindings>
     <bindings scd="tns:getOrderResponse">
-      <class ref="com.alpha.ordervalidity.model.GetOrderResponse"/>
+      <class ref="com.alpha.ordervalidity.Model.GetOrderResponse"/>
     </bindings>
     <bindings scd="~tns:order">
-      <class ref="com.alpha.ordervalidity.model.Order"/>
+      <class ref="com.alpha.ordervalidity.Model.Order"/>
     </bindings>
   </bindings>
 </bindings>

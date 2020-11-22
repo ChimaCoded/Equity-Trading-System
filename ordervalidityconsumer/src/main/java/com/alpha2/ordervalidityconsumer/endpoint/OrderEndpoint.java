@@ -15,19 +15,22 @@ public class OrderEndpoint {
     @Autowired
     private OrderService orderService;
 
-    @PostMapping("/singleOrder")
+//    @PostMapping("/singleOrder")
+//    public GetOrderResponse postOrderResponse(@RequestBody GetOrderRequest request){
+//        return orderService.getOrderResponse(request);
+//
+//
+//    }
+//
+//    @GetMapping("/singleOrder")
+//    public GetOrderResponse getOrderRequest(@RequestBody GetOrderRequest request){
+//        return orderService.getOrderResponse(request);
+//    }
+
     public GetOrderResponse postOrderResponse(@RequestBody GetOrderRequest request){
         return orderService.getOrderResponse(request);
 
-
     }
-
-    @GetMapping("/singleOrder")
-    public GetOrderResponse getOrderRequest(@RequestBody GetOrderRequest request){
-        return orderService.getOrderResponse(request);
-    }
-
-
 
 
 }

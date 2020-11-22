@@ -6,7 +6,7 @@
 //
 
 
-package com.alpha.ordervalidity.model;
+package com.alpha.ordervalidity.Model;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
