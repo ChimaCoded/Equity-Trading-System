@@ -39,7 +39,7 @@ public class OrderValidityQueue {
 
                     String order = Ultility.convertToString(resp.getOrder());
                     System.out.println(order);
-                    jedis.lpush("Client Order", order);
+                    jedis.lpush("ClientOrder", order);
                 }
             }
         }).start();
