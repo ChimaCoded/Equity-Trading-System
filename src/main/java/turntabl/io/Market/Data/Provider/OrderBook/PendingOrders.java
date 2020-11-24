@@ -87,4 +87,15 @@ public class PendingOrders {
         this.url = url;
     }
 
+    @Override
+    public String toString() {
+        return "PendingOrders{" +
+                "product='" + product + '\'' +
+                ", quantity=" + quantity +
+                ", price=" + price +
+                ", side='" + side + '\'' +
+                ", cumulativeQuantity=" + cumulativeQuantity +
+                ", url='" + url + '\'' +
+                '}';
+    }
 }

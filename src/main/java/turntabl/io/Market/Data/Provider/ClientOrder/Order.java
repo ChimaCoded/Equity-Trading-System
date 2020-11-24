@@ -1,4 +1,4 @@
-package turntabl.io.Market.Data.Provider.OrderBook;
+package turntabl.io.Market.Data.Provider.ClientOrder;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -98,5 +98,19 @@ public class Order {
 
     public void setTimeStamp(String timeStamp) {
         this.timeStamp = timeStamp;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "orderId='" + orderId + '\'' +
+                ", clientId='" + clientId + '\'' +
+                ", portfolioId='" + portfolioId + '\'' +
+                ", ticker='" + ticker + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", side='" + side + '\'' +
+                ", timeStamp='" + timeStamp + '\'' +
+                '}';
     }
 }

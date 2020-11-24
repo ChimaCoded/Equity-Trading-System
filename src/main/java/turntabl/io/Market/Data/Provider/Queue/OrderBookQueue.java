@@ -4,11 +4,13 @@ import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import redis.clients.jedis.Jedis;
-import turntabl.io.Market.Data.Provider.OrderBook.Order;
+import turntabl.io.Market.Data.Provider.ClientOrder.Order;
 import turntabl.io.Market.Data.Provider.OrderBook.PendingOrders;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class OrderBookQueue {
 
@@ -45,7 +47,7 @@ public class OrderBookQueue {
                     orderRepository.clear();
                     orderBookRepository.clear();
 
-                    String data = jedis.rpop("Client Order");
+                    String data = jedis.rpop("OrderBookRequest");
                     if(data == null) continue;
                     Order order = Ultility.convertToObject(data, Order.class);
                     orderRepository.add(order);
@@ -77,11 +79,22 @@ public class OrderBookQueue {
                                 object.getCumulativeQuantity(), object.getUrl());
                         orderBookRepository.add(pendingOrders);
                     });
-
-                    if(orderBookRepository == null) continue;
-                    System.out.println(orderRepository.get(0).toString());
-                    String orderBook = Ultility.convertToString(orderBookRepository);
-                    jedis.lpush("Order Book", orderBook);
+                    switch (orderBookRepository.get(0).getSide()){
+                        case "BUY":
+                            if(orderBookRepository == null) continue;
+                            String buyOrderBook = Ultility.convertToString(orderBookRepository.stream()
+                                    .min(Comparator.comparing(PendingOrders::getPrice)).get());
+                            System.out.println(buyOrderBook);
+                            jedis.lpush("OrderBook", buyOrderBook);
+                            break;
+                        case "SELL":
+                            if(orderBookRepository == null) continue;
+                            String sellOrderBook = Ultility.convertToString(orderBookRepository.stream()
+                                    .max(Comparator.comparing(PendingOrders::getPrice)).get());
+                            System.out.println(sellOrderBook);
+                            jedis.lpush("OrderBook", sellOrderBook);
+                            break;
+                    }
                 }
             }
         }).start();
