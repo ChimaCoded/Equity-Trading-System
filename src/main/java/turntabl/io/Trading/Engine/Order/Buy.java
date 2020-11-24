@@ -2,12 +2,19 @@ package turntabl.io.Trading.Engine.Order;
 
 public class Buy {
 
-    private double orderPrice, orderBookPrice;
+    private double orderBalance;
+
+    private double orderBookPrice;
+
+    private double bidPrice;
+
     private int orderQuantity, orderBookQuantity;
 
+    private double accountBalance;
 
-    public Buy(double orderPrice, double orderBookPrice, int orderQuantity, int orderBookQuantity) {
-        this.orderPrice = orderPrice;
+
+    public Buy(double orderBalance, double orderBookPrice, int orderQuantity, int orderBookQuantity) {
+        this.orderBalance = orderBalance;
         this.orderBookPrice = orderBookPrice;
         this.orderQuantity = orderQuantity;
         this.orderBookQuantity = orderBookQuantity;
@@ -16,12 +23,12 @@ public class Buy {
     public Buy() {
     }
 
-    public double getOrderPrice() {
-        return orderPrice;
+    public double getOrderBalance() {
+        return orderBalance;
     }
 
-    public void setOrderPrice(double orderPrice) {
-        this.orderPrice = orderPrice;
+    public void setOrderBalance(double orderBalance) {
+        this.orderBalance = orderBalance;
     }
 
     public double getOrderBookPrice() {
@@ -36,8 +43,8 @@ public class Buy {
         return orderQuantity;
     }
 
-    public void setOrderQuantity(int orderQuantity) {
-        this.orderQuantity = orderQuantity;
+    public void setOrderQuantity() {
+        this.orderQuantity = this.orderBookQuantity;
     }
 
     public int getOrderBookQuantity() {
@@ -45,6 +52,30 @@ public class Buy {
     }
 
     public void setOrderBookQuantity(int orderBookQuantity) {
+
         this.orderBookQuantity = orderBookQuantity;
+    }
+
+    public double getBidPrice() {
+        return bidPrice;
+    }
+
+    public void setBidPrice() {
+        this.bidPrice = this.orderBookPrice;
+    }
+
+    public double balance(){
+        this.accountBalance = this.orderBookPrice * this.orderBookQuantity;
+        return this.accountBalance;
+    }
+
+    @Override
+    public String toString() {
+        return "Buy{" +
+                "orderPrice=" + orderBalance +
+                ", orderBookPrice=" + orderBookPrice +
+                ", orderQuantity=" + orderQuantity +
+                ", orderBookQuantity=" + orderBookQuantity +
+                '}';
     }
 }

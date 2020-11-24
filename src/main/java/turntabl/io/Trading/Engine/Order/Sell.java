@@ -1,21 +1,23 @@
 package turntabl.io.Trading.Engine.Order;
 
-import turntabl.io.Trading.Engine.MarketData.MarketData;
-
 public class Sell {
+    private double orderBookPrice;
 
-    MarketData market_data = new MarketData();
+    private double sellPrice;
 
-    private double best_last_traded_price;
 
-    /*public double comparing_last_traded_price(){
-        if (market_data.getLast_traded_price() > market_data_2.getLast_traded_price()){
-            best_last_traded_price = market_data.getLast_traded_price();
-        }
-        else{
-            best_last_traded_price = market_data_2.getLast_traded_price();
-        }
+    public Sell() {
+    }
 
-        return best_last_traded_price;
-    }*/
+    public Sell(double orderBookPrice) {
+        this.orderBookPrice = orderBookPrice;
+    }
+
+    public double getSellPrice() {
+        return sellPrice;
+    }
+
+    public void setSellPrice() {
+        this.sellPrice = this.orderBookPrice;
+    }
 }

@@ -2,8 +2,8 @@ package turntabl.io.Trading.Engine.OrderBook;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class OrderBook {
     private String product;
 
@@ -15,12 +15,15 @@ public class OrderBook {
 
     private int cumulativeQuantity;
 
-    public OrderBook(String product, int quantity, double price, String side, int cumulativeQuantity) {
+    private String url;
+
+    public OrderBook(String product, int quantity, double price, String side, int cumulativeQuantity, String url) {
         this.product = product;
         this.quantity = quantity;
         this.price = price;
         this.side = side;
         this.cumulativeQuantity = cumulativeQuantity;
+        this.url = url;
     }
 
     public OrderBook() {
@@ -64,5 +67,25 @@ public class OrderBook {
 
     public void setCumulativeQuantity(int cumulativeQuantity) {
         this.cumulativeQuantity = cumulativeQuantity;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    @Override
+    public String toString() {
+        return "OrderBook{" +
+                "product='" + product + '\'' +
+                ", quantity=" + quantity +
+                ", price=" + price +
+                ", side='" + side + '\'' +
+                ", cumulativeQuantity=" + cumulativeQuantity +
+                ", url='" + url + '\'' +
+                '}';
     }
 }

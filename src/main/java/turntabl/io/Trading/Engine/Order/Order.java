@@ -21,6 +21,12 @@ public class Order {
 
     private String timeStamp;
 
+    private double bidPrice;
+
+    private String url;
+
+    private double sellPrice;
+
     public Order(String orderId, String clientId, String portfolioId, String ticker,
                  double price, int quantity, String side, String timeStamp) {
         this.orderId = orderId;
@@ -34,6 +40,37 @@ public class Order {
     }
 
     public Order() {
+    }
+
+    //buy
+    public Order(String orderId, String clientId, String portfolioId, String ticker,
+                 double price, int quantity, String side, String timeStamp, double bidPrice,
+                 String url) {
+        this.orderId = orderId;
+        this.clientId = clientId;
+        this.portfolioId = portfolioId;
+        this.ticker = ticker;
+        this.price = price;
+        this.quantity = quantity;
+        this.side = side;
+        this.timeStamp = timeStamp;
+        this.bidPrice = bidPrice;
+        this.url = url;
+    }
+
+    //sell
+    public Order(String orderId, String clientId, String portfolioId, String ticker,
+                 int quantity, String side, String timeStamp, String url,
+                 double sellPrice) {
+        this.orderId = orderId;
+        this.clientId = clientId;
+        this.portfolioId = portfolioId;
+        this.ticker = ticker;
+        this.quantity = quantity;
+        this.side = side;
+        this.timeStamp = timeStamp;
+        this.url = url;
+        this.sellPrice = sellPrice;
     }
 
     public String getOrderId() {
@@ -100,6 +137,30 @@ public class Order {
         this.timeStamp = timeStamp;
     }
 
+    public double getBidPrice() {
+        return bidPrice;
+    }
+
+    public void setBidPrice(double bidPrice) {
+        this.bidPrice = bidPrice;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public double getSellPrice() {
+        return sellPrice;
+    }
+
+    public void setSellPrice(double sellPrice) {
+        this.sellPrice = sellPrice;
+    }
+
     @Override
     public String toString() {
         return "Order{" +
@@ -111,6 +172,9 @@ public class Order {
                 ", quantity=" + quantity +
                 ", side='" + side + '\'' +
                 ", timeStamp='" + timeStamp + '\'' +
+                ", bidPrice=" + bidPrice +
+                ", url='" + url + '\'' +
+                ", sellPrice=" + sellPrice +
                 '}';
     }
 }

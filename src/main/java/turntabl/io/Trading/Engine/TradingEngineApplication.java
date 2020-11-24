@@ -2,10 +2,7 @@ package turntabl.io.Trading.Engine;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import turntabl.io.Trading.Engine.Order.Order;
-import turntabl.io.Trading.Engine.Queue.MarketDataQueueMonitor;
-import turntabl.io.Trading.Engine.Queue.OrderBookQueueMonitor;
-import turntabl.io.Trading.Engine.Queue.OrderQueueMonitor;
+import turntabl.io.Trading.Engine.Queue.FinalOrderQueue;
 
 @SpringBootApplication
 public class TradingEngineApplication {
@@ -15,12 +12,12 @@ public class TradingEngineApplication {
 
 //		MarketDataQueueMonitor marketDataQueueMonitor = new MarketDataQueueMonitor();
 //		marketDataQueueMonitor.getFromQueue();
-//
-//		OrderBookQueueMonitor orderBookQueueMonitor = new OrderBookQueueMonitor();
-//		orderBookQueueMonitor.getFromQueue();
 
-		OrderQueueMonitor orderQueueMonitor = new OrderQueueMonitor();
-		orderQueueMonitor.getFromQueue();
-	}
+		FinalOrderQueue finalOrderQueue = new FinalOrderQueue();
+		finalOrderQueue.thread();
+
+		}
 
 }
+
+
