@@ -1,0 +1,8 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:od="http://alpha.com/ordervalidity/model">
+    <soap:Body>
+        <od:getOrderRequest >
+            <od:clientId>102</od:clientId>
+        </od:getOrderRequest>
+    </soap:Body>
+</soap:Envelope>
